@@ -14,7 +14,7 @@
     <form method="POST">
         <label for="currenyInput">Fill in the amount: €</label>
         <br>
-        <input type="number" placeholder="Amount in Euros">
+        <input type="number" name="euro" placeholder="Amount in Euros">
         <label for="EUR">
         <br>
         <br>
@@ -30,8 +30,16 @@
         <input type="submit" value="Submit" name="submit">
     </form>
     <?php
+
+//Exchange rates:
+//1 EUR = 10.3821 NOK
+//1 NOK = 0.0963198 EUR
+
     if (isset($_POST['submit'])){ //the POST form has been submitted
 echo "You have submitted the form";
+
+        $euro = $_POST['euro'];
+        $kroner = $_POST['NOK'];
     }
 ?>
 </body>
