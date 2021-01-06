@@ -35,11 +35,25 @@
 //1 EUR = 10.3821 NOK
 //1 NOK = 0.0963198 EUR
 
+//1 EUR = 1.23212 USD
+//1 USD = 0.811609 EUR
+
     if (isset($_POST['submit'])){ //the POST form has been submitted
 echo "You have submitted the form";
 
         $euro = $_POST['euro'];
         $kroner = $_POST['NOK'];
+        $currency = $_POST[''];
+        $exchangeNokEur = 10.3821;
+        $exchangeEurNok = 0.0963198;
+        $exchangeUsdEur =  1.23212;
+        $exchangeEurUsd = 0.811609;
+
+        if ($currency == 'NOK') {
+            echo $euro * $exchangeNokEur;
+        } else if ($currency == 'USD') {
+            echo $euro * $exchangeUsdEur;
+        }
     }
 ?>
 </body>
