@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
+<h2>Convert your currency</h2>
+<h3>from Euro</h3>
+    <form action="/index.php">
+        <label for="currenyInput">Fill in the amount:</label>
+        <input type="number" placeholder="499">
+        <label for="EUR">
+            Select desired currency:
+        </label>
+        <select id="currency" name="currency">
+            <option value="Euro">EUR</option>
+            <option value="USDollar">USD</option>
+            <option value="Norwegian_Krone">NOK</option>
+        </select>
+
+
+
+    </form>
 </body>
+
 </html>
