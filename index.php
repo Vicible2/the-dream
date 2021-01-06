@@ -11,10 +11,10 @@
 
 <h1>Going abroad?</h1>
 <h2>Find out how much you're actually spending!</h2>
-    <form>
+    <form method="POST">
         <label for="currenyInput">Fill in the amount: €</label>
         <br>
-        <input type="number" placeholder="499">
+        <input type="number" placeholder="Amount in Euros">
         <label for="EUR">
         <br>
         <br>
@@ -23,15 +23,17 @@
         <br>
         <select id="currency" name="currency">
         <option value="none"></option>
-            <option value="NOK">NOK</option>
-            <option value="USDollar">USD</option>
+            <option name="NOK" value="NorskeKroner">NOK</option>
+            <option name="USD" value="USDollar">USD</option>
            
         </select>
-        <input type="submit" value="Submit">
-
-
-
+        <input type="submit" value="Submit" name="submit">
     </form>
+    <?php
+    if (isset($_POST['submit'])){ //the POST form has been submitted
+echo "You have submitted the form";
+    }
+?>
 </body>
 
 </html>
