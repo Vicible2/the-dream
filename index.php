@@ -41,6 +41,7 @@
     if (isset($_POST['submit'])){ //the POST form has been submitted
 echo "You have submitted the form";
 
+        //Variables
         $euro = $_POST['euro'];
         $kroner = $_POST['NOK'];
         $currency = $_POST[''];
