@@ -44,15 +44,15 @@ echo "You have submitted the form";
         //Variables
         $euro = $_POST['euro'];
         $kroner = $_POST['NOK'];
-        $currency = $_POST[''];
+        $currency = $_POST['currency'];
         $exchangeNokEur = 10.3821;
         $exchangeEurNok = 0.0963198;
         $exchangeUsdEur =  1.23212;
         $exchangeEurUsd = 0.811609;
 
-        if ($currency == 'NOK') {
+        if ($currency == "NOK") {
             echo $euro * $exchangeNokEur;
-        } else if ($currency == 'USD') {
+        } else if ($currency == "USD") {
             echo $euro * $exchangeUsdEur;
         }
     }
