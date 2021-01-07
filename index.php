@@ -20,12 +20,11 @@
     //1 USD = 0.811609 EUR
 
     if (isset($_POST['submit'])){ //the POST form has been submitted
-        echo "You have submitted the form";
 
         //Variables
         $euro = $_POST['euro'];
-        $kroner = $_POST['NOK'];
         $currency = $_POST['currency'];
+
         $exchangeNokEur = 10.3821;
         $exchangeEurNok = 0.0963198;
         $exchangeUsdEur =  1.23212;
@@ -54,8 +53,8 @@
         <br>
         <select id="currency" name="currency">
             <option value="none"></option>
-            <option name="NOK" value="NorskeKroner">NOK</option>
-            <option name="USD" value="USDollar">USD</option>
+            <option name="NOK" value="NOK">NOK</option>
+            <option name="USD" value="USD">USD</option>
 
         </select>
         <input type="submit" value="Submit" name="submit">
